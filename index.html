@@ -418,7 +418,7 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
         	    All the events hosted by us in this week and the next week. <br>
         	    <br>
         	    Click on an event to learn more
-        		<div class="event-container just-check" style="justify-content:center;">
+        		<div class="event-container" id="just-check" style="justify-content:center;">
         		    <div class="event-pane">
         		        <img src="https://media.greenmatters.com/brand-img/YwKiQ2tfV/1440x753/trashtag-clean-up-litter-1552318521531.jpg" class="event-img">
         		        <div>
@@ -607,7 +607,7 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
                 
                 //Starts that function for events clicking
                 $(".event-pane").click(function(){
-                    openModal(event_array[$(".just-check").index(this)])
+                    openModal(event_array[$("#just-check").index(this)])
                 });
         </script>
         
