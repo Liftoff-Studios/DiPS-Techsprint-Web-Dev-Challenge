@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <!--
-
     This website is made for the DiPS Techsprint Web Dev challenge 2021
     Made by Abhijit Biswas
     I decided to make an SPA because I usually make those kind of pages
     I am mostly active on Khan Academy
-
     Credits: SVG's taken from the internet. Company imgs taken from the internet
-
 -->
 <html>
     <head>
@@ -418,8 +415,8 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
         	    All the events hosted by us in this week and the next week. <br>
         	    <br>
         	    Click on an event to learn more
-        		<div class="event-container" id="just-check" style="justify-content:center;">
-        		    <div class="event-pane">
+        		<div class="event-container" style="justify-content:center;">
+        		    <div class="event-pane" onclick="openContent(0)">
         		        <img src="https://media.greenmatters.com/brand-img/YwKiQ2tfV/1440x753/trashtag-clean-up-litter-1552318521531.jpg" class="event-img">
         		        <div>
         		            <h4 class="center"><b>Trash Clean-Up</b></h4>
@@ -428,7 +425,7 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
         		            Deadline: 04.09.2021 <span class="closed-event">Closed</span>
         		        </div>
         		    </div>
-        		    <div class="event-pane">
+        		    <div class="event-pane"  onclick="openContent(1)">
         		        <img src="https://mk0logisticsoftiiud5.kinstacdn.com/wp-content/uploads/2019/11/Article-Key-Image-453431968-800x420.jpg" class="event-img">
         		        <div>
         		            <h4 class="center"><b>Tree Planting Session</b></h4>
@@ -437,7 +434,7 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
         		            Deadline: 06.09.2021 <span class="closed-event" style="background-color:green">Open</span>
         		        </div>
         		    </div>
-        		    <div class="event-pane">
+        		    <div class="event-pane"  onclick="openContent(2)">
         		        <img src="https://www.treehugger.com/thmb/oOvFl2sXo7NbPw7nmsnxKnHNyxk=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2020__05__bird-watching-lockdown-d7f813399792449d869b1aeb3cd4e490.jpg" class="event-img">
         		        <div>
         		            <h4 class="center"><b>Bird Watching Trip</b></h4>
@@ -446,7 +443,7 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
         		            Deadline: 04.09.2021 <span class="closed-event">Closed</span>
         		        </div>
         		    </div>
-        		    <div class="event-pane">
+        		    <div class="event-pane"  onclick="openContent(3)">
         		        <img src="https://images.theconversation.com/files/405661/original/file-20210610-18-imwshy.jpg?ixlib=rb-1.1.0&rect=6%2C0%2C4486%2C2997&q=45&auto=format&w=926&fit=clip" class="event-img">
         		        <div>
         		            <h4 class="center"><b>Hiking</b></h4>
@@ -605,10 +602,11 @@ Nulla venenatis dui orci, vel semper ligula tempor eu. Cras id sapien nec nunc p
                 "<h1 class=\"center\"><u>Hiking</u></h1><br>                Are you a hiking freek ? If so, then join us on a hiking expedition to Nandi hills on 14/09/2021. Registration is free of cost. <br> Items to bring along:- Bagpack and snacks !!"
                 ];
                 
-                //Starts that function for events clicking
-                $(".event-pane").click(function(){
-                    openModal(event_array[$("#just-check").index(this)])
-                });
+
+	function openContent(index){
+		openModal(event_array[index])
+	}
+               
         </script>
         
         <!--Page change script-->
